@@ -195,27 +195,43 @@ function hitFiercenessAverage() {
 
 // 15. Return the sum of Beyonce's rating value for all of her movies
 function ratingSum() {
-  sum = 0;
+  let sum = 0;
   beyonceHash.movies.forEach((movie) => (sum += movie.rating));
   return sum;
 }
 
 // 16. Return the average rating value for all of her movies
 function ratingAverage() {
-  sum = 0;
+  let sum = 0;
   len = beyonceHash.movies.length;
   beyonceHash.movies.forEach((movie) => (sum += movie.rating));
   return sum / len;
 }
 
 // 17. Return the sum of the total number of dancers in all of the hit song videos
-function hitDancerSum() {}
+function hitDancerSum() {
+  let sum = 0;
+  beyonceHash.hits.forEach((hit) => {
+    sum += hit.dancers;
+  });
+  return sum;
+}
+// console.log(hitDancerSum());
 
 // 18. Return an array of Beyonce's hairstyles without repeats
-function uniqueHairstyles() {}
+function uniqueHairstyles() {
+  beyonceHash.hits.filter((hit) => {
+    hit.dancers;
+  });
+}
 
 // 19. Return an object where the properties are song names and the value is an object which contains that song's fierceness and the average fierceness for all songs
-function songFiercenessByName() {}
+function songFiercenessByName() {
+  obj = {};
+  beyonceHash.hits.forEach((hit) => (obj[hit.title] = hit.fierceness));
+  return obj;
+}
+console.log(songFiercenessByName());
 
 // 20. Return an object where the properties are movie names and the value is an object which contains that movie's rating and the average rating for all movies
 function movieRatingsByName() {}
